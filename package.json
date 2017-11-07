@@ -1,6 +1,6 @@
 {
   "name": "ts-bdd-check",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple typescript wrapper for bdd and testcheck",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
