@@ -1,4 +1,5 @@
 # BDD Check
+[![Build Status](https://travis-ci.org/justmiller/ts-bdd-check.svg?branch=master)](https://travis-ci.org/justmiller/ts-bdd-check)
 
 Using the testcheck.js, we don't have the bindings for libraries like Mocha-Chai, Jasmine, Jest. So we are going to be writing a wrapper in ts to utilize in these test environments.
 
