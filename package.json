@@ -2,8 +2,8 @@
   "name": "ts-bdd-check",
   "version": "1.1.3",
   "description": "Simple typescript wrapper for bdd and testcheck",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/justmiller/ts-lens"
@@ -11,7 +11,7 @@
   "author": "Justin Miller<mogulslayer@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --outDir dist/",
+    "build": "rm -rf ./dist && tsc --outDir dist/ && cp ./package.json ./dist/",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --format stylish",
     "run-script": "npm run lint && npm run build && npm run test",
