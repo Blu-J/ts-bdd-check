@@ -1,29 +1,26 @@
 language: node_js
 node_js:
-  - "node"
+- node
 notifications:
   email:
     on_success: never
     on_failure: always
-  
-cache: 
+cache:
   yarn: true
   directories:
-    - typings
-
+  - typings
 before_deploy:
-  - cd dist
-
+- cd dist
 deploy:
   skip_cleanup: true
   provider: npm
   email: dragondef@gmail.com
-  api_key: $NPM_TOKEN
+  api_key:
+    secure: Yl+Ki8/QAWth58lzayJKl+WCTM0zLkgYB/LiM6fEx3Zg6wodqvBQoB9HeS+0M14cXG2rQoms11HRxhE2qwV7jk6Rt5fJHceuNAv0LQJCGJ8VYpiNSWi0ctjozQFlima8IteavjSeGKyzvh82tNwsUUVvEk6lp+vJYFE8LoEUvUnlnG7MmTtB2oc/hQeHvj9duW+fQMv/tJHfzhofgwbIV9FrNoR/gHgj9ElHuPnYZlPcD4f+XFcRv7sfuCI+pN3w1Z0kYllZBCynpa6G/CgwxVbjY8cnhc0OL+4FAUoOdeJJIF8OdudC791Yg86o2z0DOmEvYFnDwT8OxrGvL7YzGA+5RYfLTQLCH3cocSDM3xmyp8yB9D17QhN11SdEuDk3Tzx+yZvxOAQTJkKJTRgi+8KJtSsLqkmPrSYTUt6td+jpATu0COSgSyHFzlMBqlkh3Hzbmbxo6I5lEAHlRyg3S0QSa1ci1qm17VB2V5UU8qnlwBHkSwJJJ11M6JMGEEaLVPlsICXWJKtCk7YbQ7kG94gYWjBCJZZkJ43p2+G1hhQPE4fZtggOUWLoaGJ7l274RsDEmEQJAgp/VecH+lgC67VAzmcORvvZTMFq7/sYZcpSXTh2JSwgQIkky3RBDMHfwMV31Yykx3dcmSBSSPRo878cB9bk34oMbwaegyE2NwA=
   on:
     branch: master
     tags: true
-    
 script:
-  - npm run run-script
+- npm run run-script
 after_success:
-  - npm run build
+- npm run build
